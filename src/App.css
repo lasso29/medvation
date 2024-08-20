@@ -1,16 +1,39 @@
-/* .hh{
-  color: rgba(0, 0, 0, 0.63);
-} */
-/* #1463F3 #040023 */
+/* Loader styles */
+.loader {
+  width: 60px; /* Increased width */
+  height: 60px; /* Increased height */
+  border: 10px dotted #2367e5; /* Increased border width for bigger dots */
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 2s linear infinite;
+}
 
-/* .carousel-item .cover{
-  background: linear-gradient(to left, #1462f363, #040023c2) !important;
-} */
+/* Center the loader */
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed; /* Use fixed positioning to cover the entire viewport */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.746
+  ); /* Semi-transparent background for the container */
+  z-index: 3000; /* Ensure it is above other content */
+}
 
-/* .carousel-item .cover {
-  background: linear-gradient(to left, #1462f3 30%, #040023 70%) !important;
-} */
-
-.carousel-item .cover {
-  background: linear-gradient(to left, rgba(20, 98, 243, 0.8) 0%, rgba(20, 0, 35, 0.8) 100%) !important;
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

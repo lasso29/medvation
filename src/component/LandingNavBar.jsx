@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from '../../assets/images/medvation-logo.png'
+import logo from '../assets/images/medvation-logo.png'
 import { Link } from "react-router-dom";
 const LandingNavBar = () => {
     const [pageMode, setPageMode] = useState('home')

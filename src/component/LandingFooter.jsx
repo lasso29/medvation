@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../assets/images/medvation-logo.png";
+import logo from "../assets/images/medvation-logo.png";
 import { TiSocialFacebook } from "react-icons/ti";
 import { TiSocialLinkedin } from "react-icons/ti";
 import { FaYoutube } from "react-icons/fa";

@@ -1,11 +1,11 @@
 import React from "react";
-import LandingNavBar from "./component/LandingNavBar";
-import LandingFooter from "./component/LandingFooter";
+import LandingNavBar from "../component/LandingNavBar";
+import LandingFooter from "../component/LandingFooter";
 import slidin1 from "../assets/images/sliding-one.jpg";
 import slidin2 from "../assets/images/sliding-two.jpg";
 import slidin3 from "../assets/images/sliding-three.jpg";
-import About from "./component/About";
-import AppointmentForm from "./component/AppointmentForm";
+import About from "../component/About";
+import AppointmentForm from "../component/AppointmentForm";
 
 const Landingpage = () => {
   return (
@@ -63,10 +63,14 @@ const Landingpage = () => {
                   className="text-information text-white"
                   style={{ fontSize: "50px" }}
                 >
-                 "Discover Expert-Curated Medical Resources to Elevate Your Knowledge and Stay Ahead in Your Field"
+                  "Discover Expert-Curated Medical Resources to Elevate Your
+                  Knowledge and Stay Ahead in Your Field"
                 </h4>
                 <p className="text-information-small text-white fs-3">
-                Explore a wealth of medical resources curated by experts in the field. From research papers to instructional videos, we have everything you need to stay ahead in your medical journey.
+                  Explore a wealth of medical resources curated by experts in
+                  the field. From research papers to instructional videos, we
+                  have everything you need to stay ahead in your medical
+                  journey.
                 </p>
               </div>
             </div>
@@ -89,10 +93,13 @@ const Landingpage = () => {
                   className="text-information text-white"
                   style={{ fontSize: "50px" }}
                 >
-                  "Your Trusted Source for the Latest Medical News and Healthcare Advancements"
+                  "Your Trusted Source for the Latest Medical News and
+                  Healthcare Advancements"
                 </h4>
                 <p className="text-information-small text-white fs-3">
-                Stay informed with our regularly updated medical news section. Get insights into the latest advancements in healthcare and medicine.
+                  Stay informed with our regularly updated medical news section.
+                  Get insights into the latest advancements in healthcare and
+                  medicine.
                 </p>
               </div>
             </div>

@@ -1,61 +1,61 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
- body{
+body {
   font-family: inter;
- }
+}
 
-.medvation-logo{
+.medvation-logo {
   width: 12%;
 }
 
-@media (max-width:780px){
-  .medvation-logo{
+@media (max-width: 780px) {
+  .medvation-logo {
     width: 40%;
   }
 }
 
-.landing-footer{
+.landing-footer {
   background-color: white;
-  color:#040023;
+  color: #040023;
 }
 
-.text-information{
+.text-information {
   font-family: inter;
-
 }
 
+.btnStyle {
+  background-color: #1b08adb9 !important;
+  color: white !important;
+}
 
-.text-about-topic{
+.text-about-topic {
   color: #040023;
 }
 
-.text-about-topic:hover{
-  color:#1463F3;
+.text-about-topic:hover {
+  color: #1463f3;
 }
 
-
-.about-text{
+.about-text {
   color: #040023;
 }
 
-
-.about-icon{
+.about-icon {
   font-size: 50px;
-  color: #1463F3;
+  color: #1463f3;
 }
 
-.list-unstyled{
-  color:#040023 ;
+.list-unstyled {
+  color: #040023;
 }
 
-.list-unstyled:hover{
-  color:#1463F3 ;
+.list-unstyled:hover {
+  color: #1463f3;
 }
-
 
 /* SignUp Styling */
 .signUp-logo {
@@ -72,16 +72,15 @@
 @media (max-width: 576px) {
   .card {
     max-width: 90%;
-    padding: 1rem; 
+    padding: 1rem;
   }
 }
 
 .form-control {
-  outline: none !important; 
+  outline: none !important;
   box-shadow: none !important;
   border: 1px solid #ced4da !important;
 }
-
 
 .form-control:focus {
   border-color: #1462f3 !important;
@@ -90,38 +89,36 @@
 
 /* Remove outline on focus for buttons */
 button {
-  outline: none !important; 
+  outline: none !important;
   box-shadow: none !important;
 }
 
 button:focus {
   border: 2px solid #1462f3 !important;
-  box-shadow: none !important; 
+  box-shadow: none !important;
 }
 
-
-.SignUp-button{
+.SignUp-button {
   background-color: #040023;
   color: white;
 }
 
-.SignUp-button:hover{
-  background-color:#1462f3;
+.SignUp-button:hover {
+  background-color: #1462f3;
   color: white;
 }
 
 @media (max-width: 576px) {
-  .text-information-small{
+  .text-information-small {
     font-size: 18px !important;
     margin: auto;
   }
-  .text-information{
+  .text-information {
     font-size: 30px !important;
   }
-  .coverText{
+  .coverText {
     position: relative;
     padding: 30px !important;
     top: 20%;
   }
 }
-  
