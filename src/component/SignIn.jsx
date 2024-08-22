@@ -21,6 +21,8 @@ const SignIn = () => {
     email: Yup.string()
       .email("Invalid email address")
       .required("Email is required"),
+    role: Yup.string().required("Role is required"),
+
     password: Yup.string()
       .min(6, "Password must be at least 6 characters")
       .required("Password is required"),
@@ -29,6 +31,7 @@ const SignIn = () => {
   // Initial form values
   const initialValues = {
     email: "",
+    role: "",
     password: "",
   };
 
@@ -44,10 +47,10 @@ const SignIn = () => {
         setIsLoading(false);
 
         // console.log(response);
-        if (response.data === "Invalid email") {
+        if (response.data === "Invalid Credential") {
           setAlertProps({
             type: "warning",
-            message: "Invalid email! ",
+            message: "Invalid Credential! ",
             uniqueKey, // Pass uniqueKey but not display it
           });
         } else if (response.data === "Invalid password") {
@@ -64,7 +67,25 @@ const SignIn = () => {
             confirmButtonColor: "#0A2877",
           });
 
-          // navigate("/dashboa");
+          // console.log(response.data);
+          let collectUser = response.data.newUser;
+          // console.log(collectUser);
+          if (collectUser.role === "Student") {
+            navigate("/StudentDashboard");
+            localStorage.setItem("data", JSON.stringify(response.data.newUser));
+            sessionStorage.setItem("SAT", JSON.stringify(response.data.token));
+          } else if (collectUser.role === "Medical Specialist") {
+            navigate("/MedicalDashboard");
+            localStorage.setItem("data", JSON.stringify(response.data.newUser));
+            sessionStorage.setItem("MAT", JSON.stringify(response.data.token));
+          } else {
+            setIsLoading(false);
+            setAlertProps({
+              type: "danger",
+              message: "An error occurred! ",
+              uniqueKey, // Pass uniqueKey but not display it
+            });
+          }
         } else {
           Swal.fire({
             icon: "error",
@@ -127,6 +148,21 @@ const SignIn = () => {
                   />
                   <ErrorMessage
                     name="email"
+                    component="div"
+                    className="text-danger"
+                  />
+                </div>
+
+                <div className="form-group mb-3">
+                  <Field as="select" name="role" className="form-control">
+                    <option value="">Login as ?</option>
+                    <option value="Student">Student</option>
+                    <option value="Medical Specialist">
+                      Medical Specialist
+                    </option>
+                  </Field>
+                  <ErrorMessage
+                    name="role"
                     component="div"
                     className="text-danger"
                   />
